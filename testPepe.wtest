@@ -1,10 +1,55 @@
 import pepe.*
 
-describe "Sueldo Pepe" {
+describe "Sueldo Pepe: Caso 1" {
 	
-	test "Test 1" {
-		//TODO: Implementame
+	test "Pepe es cadete y cobra bono monto fijo y normal con 3 faltas" {
+		assert.equals(cadete, pepe.categoria)
+		assert.equals(monto, pepe.tipoBonoResultados)
+		assert.equals(normal, pepe.tipoBonoPresentismo)
+		assert.equals(3, pepe.faltas)
 	}
 
+	test "El sueldo de Pepe es correcto" {
+		assert.equals(20800, pepe.sueldo())
+	}
+}
+
+describe "Sueldo Pepe: Caso 2" {
 	
+	test "Pepe es gerente y cobra bono porcentual y nulo" {
+		assert.equals(gerente, pepe.categoria)
+		assert.equals(porcentaje, pepe.tipoBonoResultados)
+	}
+
+	test "El sueldo de Pepe es correcto" {
+		assert.equals(16500, pepe.sueldo())
+	}
+}
+
+describe "Sueldo Pepe: Caso 3" {
+	
+	test "Pepe es cadete y cobra bono porcentual y normal con 0 faltas" {
+		assert.equals(cadete, pepe.categoria)
+		assert.equals(porcentaje, pepe.tipoBonoResultados)
+		assert.equals(normal, pepe.tipoBonoPresentismo)
+		assert.equals(0, pepe.faltas)
+	}
+
+	test "El sueldo de Pepe es correcto" {
+		assert.equals(24000, pepe.sueldo())
+	}
+}
+
+describe "Sueldo Pepe: Caso 4" {
+	
+	test "Pepe es cadete y cobra bono porcentual y normal con 1 falta" {
+		assert.equals(cadete, pepe.categoria)
+		assert.equals(porcentaje, pepe.tipoBonoResultados)
+		assert.equals(normal, pepe.tipoBonoPresentismo)
+		assert.equals(1, pepe.faltas)
+	}
+
+	test "El sueldo de Pepe es correcto" {
+		assert.equals(23000, pepe.sueldo())
+	}
 }
